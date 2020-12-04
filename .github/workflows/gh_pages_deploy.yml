@@ -1,5 +1,5 @@
 
-name: CI
+name: gh_pages_deploy
 
 on:
   push:
@@ -16,9 +16,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2.3.4
+        with:
+          submodules: true
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.2
+        with:
+          node-version: "14.x"
 
 
       - name: ==lautung==> setup node modules...
