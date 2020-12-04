@@ -1,0 +1,42 @@
+
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ==lautung==> get checkout...
+        uses: actions/checkout@v2
+
+      - name: ==lautung==> setup nodejs...
+        uses: actions/setup-node@v2
+
+      - name: ==lautung==> setup node modules...
+        run: npm i
+
+      - name: ==lautung==> hexo project clean and build...
+        run: |
+          npm clean
+          npm build
+
+      - name: ==lautung==> hexo project deploy to github pages...
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: main
+          force_orphan: true
+
+      
+      
+
+
