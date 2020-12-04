@@ -9,7 +9,17 @@ avatar:
 
 reward:
   enable: true
-  comment: 我很可爱，请给我钱
+  comment: 在？秦始皇，打钱！
+
+colors:
+  primary: "#6200ee"
+  # bg: "#F5F5F5"
+  selection_bg: "#8e71c1" # 选取文字时的背景色
+  # 标签云中标签的起始色和结束色
+  # tag_start_color:
+  # tag_end_color:
+
+favicon: /favicon.ico
 
 comment:
   tips:
@@ -22,10 +32,10 @@ comment:
 github_issues:
   enable: true
 
-disqusjs:
-  enable: true
-  shortname: yunyoujun
-  apikey: ouoGQCaamOKdJgyZU5DKcpFnRIg3SNzvk0nwygPtlcTRJuE68c8igvrZGW4wAJoN
+# disqusjs:
+#   enable: true
+#   shortname: yunyoujun
+#   apikey: ouoGQCaamOKdJgyZU5DKcpFnRIg3SNzvk0nwygPtlcTRJuE68c8igvrZGW4wAJoN
 
 valine:
   enable: true
@@ -99,7 +109,7 @@ footer:
   since: 2020
 
 engine_search:
-  enable: false
+  enable: true
 
 # If you want to use it, you need config algolia appID in _config.yml!!!
 # https://github.com/oncletom/hexo-algolia
