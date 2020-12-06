@@ -8,8 +8,21 @@ avatar:
     message: Fall in love.
 
 reward:
-  enable: true
+  enable: false
   comment: 在？秦始皇，打钱！
+  methods:
+    - name: 支付宝
+      path: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/alipay-qrcode.jpg
+      color: "#00A3EE"
+      icon: icon-alipay-line
+    - name: QQ 支付
+      path: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/qqpay-qrcode.png
+      color: "#12B7F5"
+      icon: icon-qq-line
+    - name: 微信支付
+      path: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/wechatpay-qrcode.jpg
+      color: "#2DC100"
+      icon: icon-wechat-pay-line
 
 colors:
   primary: "#6200ee"
@@ -111,15 +124,26 @@ valine:
 
 footer:
   since: 2020
+  live_time:
+    enable: true
+    prefix: 本博客已运行
+    suffix: (●'◡'●)
+    start_time: "2020-12-12T00:00:00"
 
 engine_search:
-  enable: true
+  enable: false
 
 # If you want to use it, you need config algolia appID in _config.yml!!!
 # https://github.com/oncletom/hexo-algolia
 #algolia_search:
   #enable: true
   # ...
+
+# search
+# https://github.com/wzpan/hexo-generator-search
+local_search:
+  enable: true
+  src: /js/search/local-search.js
 
 google_analytics:
   enable: true
@@ -197,3 +221,10 @@ utterances:
   issue-term: pathname
   label: comment
   theme: github-light
+
+codeblock:
+  copy_btn: true
+  prismjs:
+    light: default
+    dark: tomorrow
+

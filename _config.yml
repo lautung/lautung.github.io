@@ -53,16 +53,16 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
 prismjs:
-  enable: false
+  enable: true
   preprocess: true
-  line_number: true
+  line_number: false
   tab_replace: ''
 
 # Home page setting
@@ -117,3 +117,20 @@ deploy:
 - type: git
   repo: https://github.com/lautung/lautung.github.io.git
   branch: main
+
+
+fireworks:
+  enable: true
+  colors:
+    - "102, 167, 221"
+    - "62, 131, 225"
+    - "33, 78, 194"
+
+post_edit:
+  enable: true
+  url: https://github.com/lautung/lautung.github.io/tree/main/source
+
+search:
+  path: search.xml
+  field: post
+  content: true
