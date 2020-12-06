@@ -108,27 +108,6 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: yun
 
-# Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-- type: git
-  repo: https://gitee.com/lautung/lautung.git
-  branch: master
-- type: git
-  repo: https://github.com/lautung/lautung.github.io.git
-  branch: main
-
-
-fireworks:
-  enable: true
-  colors:
-    - "102, 167, 221"
-    - "62, 131, 225"
-    - "33, 78, 194"
-
-post_edit:
-  enable: true
-  url: https://github.com/lautung/lautung.github.io/tree/main/source
 
 search:
   path: search.xml

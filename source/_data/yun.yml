@@ -52,6 +52,18 @@ reward:
       color: "#2DC100"
       icon: icon-wechat-pay-line
 
+
+fireworks:
+  enable: true
+  colors:
+    - "102, 167, 221"
+    - "62, 131, 225"
+    - "33, 78, 194"
+
+post_edit:
+  enable: true
+  url: https://github.com/lautung/lautung.github.io/tree/main/source/
+
 colors:
   primary: "#6200ee"
   # bg: "#F5F5F5"
@@ -105,9 +117,6 @@ google_adsense:
   enable: true
   client: ca-pub-2245427233262012
 
-post_edit:
-  enable: true
-  url: https://github.com/YunYouJun/yunyoujun.github.io/tree/hexo/source/
 
 albums:
   enable: true
