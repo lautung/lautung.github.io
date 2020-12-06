@@ -1,4 +1,8 @@
-mode: auto
+# light: 始终为亮色模式，不打包暗色样式资源
+# dark: 始终为暗色模式
+# auto: 根据系统亮暗模式自动切换，侧边栏将显示亮暗切换按钮，可自由切换。
+# time: 根据时间切换亮暗模式，07:00-19:00 为亮模式，剩余时间为暗模式
+mode: time
 
 avatar:
   url: /images/avatar.jpg
@@ -6,6 +10,30 @@ avatar:
     enable: true
     emoji: 💘
     message: Fall in love.
+
+trianglify:
+  enable: false
+  cellSize: 75
+  width: 800
+  height: 600
+  palette: '["YlGnBu", "GnBu", "Purples", "Blues"]'
+  opacity: 0.2
+
+banner:
+  enable: true
+  title: 普普通通小池塘
+  src: /js/ui/banner.js
+  border: true
+  cloud:
+    enable: true
+    color: "white"
+  go_down:
+    enable: true
+    icon: icon-arrow-down-s-line
+
+notice:
+  enable: true
+  content: Thanks for playing my game.
 
 reward:
   enable: false
@@ -32,7 +60,7 @@ colors:
   # tag_start_color:
   # tag_end_color:
 
-favicon: /favicon.ico
+favicon: /favicon.png
 
 comment:
   tips:
@@ -128,7 +156,7 @@ footer:
     enable: true
     prefix: 本博客已运行
     suffix: (●'◡'●)
-    start_time: "2020-12-12T00:00:00"
+    start_time: "2020-12-01T00:00:00"
 
 engine_search:
   enable: false
