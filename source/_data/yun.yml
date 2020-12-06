@@ -28,9 +28,13 @@ comment:
   candidates:
     - valine
     - disqusjs
+    - utterances
 
 github_issues:
   enable: true
+  username: lautung
+  repository: lautung.github.io
+  filters: is:issue
 
 # disqusjs:
 #   enable: true
@@ -39,8 +43,8 @@ github_issues:
 
 valine:
   enable: true
-  appId: 4x0IwQ1sy95mOGQDTO8MYCeA-gzGzoHsz # your leancloud application appid
-  appKey: 9loqwF3UDklPDHaP9IN2uwN8 # your leancloud application appkey
+  appId: JuT25R7M1z37tpmolvUdc58k-gzGzoHsz # your leancloud application appid
+  appKey: VjkO3ixuoNv3GM1D4zTd2YmT # your leancloud application appkey
   # https://github.com/DesertsP/Valine-Admin
   # https://valine.yunyoujun.cn
   placeholder: 大佬求指教&nbsp_(:з」∠)_ （填写邮箱可以收到回复通知～）
@@ -186,3 +190,10 @@ say:
   api: https://el-bot-api.vercel.app/api/words/young
   hitokoto:
     enable: false
+
+utterances:
+  enable: true
+  repo: lautung/lautung.github.io
+  issue-term: pathname
+  label: comment
+  theme: github-light
