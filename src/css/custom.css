@@ -31,3 +31,29 @@
   --ifm-background-color: #14201d;
   --ifm-heading-color: #f2f7f4;
 }
+
+.markdown details {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  background: var(--ifm-background-surface-color);
+}
+
+.markdown details[open] {
+  border-color: var(--ifm-color-primary-light);
+}
+
+.markdown details > summary {
+  cursor: pointer;
+  color: var(--ifm-color-primary-dark);
+  font-weight: 700;
+}
+
+.markdown details > summary + * {
+  margin-top: 0.75rem;
+}
+
+[data-theme='dark'] .markdown details > summary {
+  color: var(--ifm-color-primary-light);
+}
