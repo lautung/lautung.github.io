@@ -46,7 +46,7 @@ class _CounterPageState extends State<CounterPage> {
 ## 何时升级方案
 
 - 页面内部临时状态：优先使用 `setState`。
-- 多个页面共享状态：再考虑 `InheritedWidget`、[Provider](./provider.md)、Riverpod 等方案。
+- 多个页面共享状态：再考虑 `InheritedWidget`、[Provider](./provider.md)、[Riverpod](./riverpod.md) 等方案。
 - 异步数据状态：至少要同时处理 loading、data 和 error。
 
 ## 学习建议
@@ -57,4 +57,4 @@ class _CounterPageState extends State<CounterPage> {
 
 ## 下一步
 
-当状态需要被多个页面或组件读取时，继续学习 [Provider 状态管理](./provider.md)。
+当状态需要被多个页面或组件读取时，可以继续学习 [Provider 状态管理](./provider.md)；如果希望状态逻辑更容易测试、复用和处理异步数据，再学习 [Riverpod 状态管理](./riverpod.md)。

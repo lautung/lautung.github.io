@@ -14,6 +14,7 @@ const sidebar = [
       'flutter/widgets-layout',
       'flutter/state',
       'flutter/provider',
+      'flutter/riverpod',
       'flutter/navigation',
       'flutter/networking',
       'flutter/storage',
