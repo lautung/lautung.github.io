@@ -1,6 +1,6 @@
 # 全栈学习笔记
 
-这是一个使用 [Docusaurus](https://docusaurus.io/) 创建的中文静态文档站，目标是逐步建设成类似菜鸟教程的全栈学习文档站。当前先记录 Java、Kotlin 和 Android 应用开发内容。
+这是一个使用 [Docusaurus](https://docusaurus.io/) 创建的中文静态文档站，目标是逐步建设成类似菜鸟教程的全栈学习文档站。当前先记录 Java、Kotlin、Android、Compose 和 Flutter 应用开发内容。
 
 ## 本地开发
 
@@ -39,11 +39,12 @@ pnpm build
 - 学习路线：`docs/intro.md`
 - Java 专题：`docs/java/basics.md`、`docs/java/oop.md`
 - Kotlin 专题：`docs/kotlin/basics.md`、`docs/kotlin/null-safety.md`
+- Compose 专题：`docs/compose/getting-started.md`、`docs/compose/state.md`、`docs/compose/navigation.md`
+- Flutter 专题：`docs/flutter/overview.md`、`docs/flutter/setup.md`、`docs/flutter/first-app.md`、`docs/flutter/provider.md`
 - Android 专题：
   - 基础篇：`docs/android/overview.md`、`docs/environment/setup.md`、`docs/android/fundamentals.md`、`docs/android/project-structure.md`
   - 高级 UI：`docs/android/advanced-ui/overview.md`
   - Jetpack 组件：`docs/android/jetpack/overview.md`
-  - Jetpack Compose UI：`docs/compose/getting-started.md`、`docs/compose/state.md`、`docs/compose/navigation.md`
   - 性能优化：`docs/android/performance-release.md`、`docs/android/performance/startup.md`
   - 应用架构：`docs/android/architecture.md`、`docs/android/architecture/mvvm.md`
   - NDK 开发：`docs/android/ndk/overview.md`

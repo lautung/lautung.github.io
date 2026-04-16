@@ -17,7 +17,7 @@ function HomepageHeader(): ReactNode {
           全栈学习笔记
         </Heading>
         <p className={styles.heroSubtitle}>
-          像查教程一样学习编程基础、语言专题和应用开发。Java、Kotlin、Android 各自独立成章，后续继续扩展全栈内容。
+          像查教程一样学习编程基础、语言专题和应用开发。Java、Kotlin、Android、Compose 和 Flutter 各自独立成章。
         </p>
         <div className={styles.buttons}>
           <Link
@@ -25,8 +25,8 @@ function HomepageHeader(): ReactNode {
             to="/docs/intro">
             开始学习
           </Link>
-          <Link className="button button--outline button--lg" to="/docs/java/basics">
-            进入 Java
+          <Link className="button button--outline button--lg" to="/docs/flutter/overview">
+            进入 Flutter
           </Link>
         </div>
       </div>
@@ -39,7 +39,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="全栈学习笔记"
-      description="用于学习 Java、Kotlin、Android 和全栈开发的中文静态文档站">
+      description="用于学习 Java、Kotlin、Android、Compose、Flutter 和全栈开发的中文静态文档站">
       <HomepageHeader />
       <main className={styles.main}>
         <section className={styles.section}>
@@ -49,7 +49,7 @@ export default function Home(): ReactNode {
             <div>
               <span>01</span>
               <Heading as="h3">准备环境</Heading>
-              <p>安装 Android Studio，确认 SDK、模拟器和 Gradle 能稳定工作。</p>
+              <p>安装 Android Studio，确认 SDK、模拟器、Gradle 和 Flutter SDK 能稳定工作。</p>
             </div>
             <div>
               <span>02</span>
@@ -59,7 +59,7 @@ export default function Home(): ReactNode {
             <div>
               <span>03</span>
               <Heading as="h3">学习 Android</Heading>
-              <p>理解 Activity、资源、生命周期和 Compose，用项目把语言能力落到应用里。</p>
+              <p>理解 Activity、资源、生命周期、Compose 和 Flutter，用项目把语言能力落到应用里。</p>
             </div>
           </div>
         </section>
@@ -69,8 +69,8 @@ export default function Home(): ReactNode {
           <p className={styles.sectionText}>
             现在先放入学习骨架和示例文档。后续可以按章节追加代码片段、截图、练习题和踩坑记录。
           </p>
-          <Link className="button button--secondary" to="/docs/android/overview">
-            进入 Android
+          <Link className="button button--secondary" to="/docs/compose/getting-started">
+            进入 Compose
           </Link>
         </section>
       </main>

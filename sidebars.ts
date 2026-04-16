@@ -1,161 +1,49 @@
+import fs from 'node:fs';
+import path from 'node:path';
+
 import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 
-const sidebars: SidebarsConfig = {
-  javaSidebar: [
-    {
-      type: 'category',
-      label: 'Java 教程',
-      collapsed: false,
-      items: ['java/basics', 'java/oop'],
-    },
-  ],
-  kotlinSidebar: [
-    {
-      type: 'category',
-      label: 'Kotlin 教程',
-      collapsed: false,
-      items: ['kotlin/basics', 'kotlin/null-safety'],
-    },
-  ],
-  androidSidebar: [
-    {
-      type: 'category',
-      label: '基础篇',
-      collapsed: false,
-      items: [
-        'android/overview',
-        'environment/setup',
-        'android/fundamentals',
-        'android/project-structure',
-        'android/app-components',
-        'android/activity-lifecycle',
-        'android/manifest-intents',
-        'android/resources',
-      ],
-    },
-    {
-      type: 'category',
-      label: '高级 UI',
-      collapsed: false,
-      items: [
-        'android/advanced-ui/overview',
-        'android/advanced-ui/view-system',
-        'android/advanced-ui/recyclerview',
-        'android/advanced-ui/animations-gestures',
-        'android/advanced-ui/custom-view',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Jetpack 组件',
-      collapsed: false,
-      items: [
-        'android/jetpack/overview',
-        'android/jetpack/lifecycle',
-        'android/jetpack/viewmodel',
-        'android/jetpack/navigation',
-        'android/jetpack/room',
-        'android/jetpack/datastore',
-        'android/jetpack/workmanager',
-        'android/background-work',
-        'android/data-storage',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Jetpack Compose UI',
-      collapsed: false,
-      items: [
-        'compose/getting-started',
-        'compose/state',
-        'compose/navigation',
-        'compose/layouts',
-        'compose/theme',
-        'compose/lists',
-        'compose/animations',
-      ],
-    },
-    {
-      type: 'category',
-      label: '性能优化',
-      collapsed: false,
-      items: [
-        'android/performance-release',
-        'android/performance/startup',
-        'android/performance/memory',
-        'android/performance/rendering',
-      ],
-    },
-    {
-      type: 'category',
-      label: '应用架构',
-      collapsed: false,
-      items: [
-        'android/architecture',
-        'android/architecture/mvvm',
-        'android/architecture/layers',
-        'android/architecture/repository',
-        'android/networking',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'NDK 开发',
-      collapsed: false,
-      items: ['android/ndk/overview', 'android/ndk/jni-basics', 'android/ndk/cmake-build'],
-    },
-    {
-      type: 'category',
-      label: 'Framework',
-      collapsed: false,
-      items: [
-        'android/framework/overview',
-        'android/framework/system-services',
-        'android/framework/binder-ipc',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Android 车载',
-      collapsed: false,
-      items: ['android/automotive/overview', 'android/automotive/auto-vs-automotive'],
-    },
-    {
-      type: 'category',
-      label: 'Android TV',
-      collapsed: false,
-      items: ['android/tv/overview', 'android/tv/focus-navigation', 'android/tv/remote-input'],
-    },
-    {
-      type: 'category',
-      label: 'Android 穿戴式设备',
-      collapsed: false,
-      items: ['android/wear/overview', 'android/wear/watch-ui', 'android/wear/health-sensors'],
-    },
-    {
-      type: 'category',
-      label: 'Android 专项测试',
-      collapsed: false,
-      items: [
-        'android/testing-debugging',
-        'android/testing/unit-testing',
-        'android/testing/ui-testing',
-        'android/testing/performance-testing',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Android 应用安全',
-      collapsed: false,
-      items: [
-        'android/permissions-security',
-        'android/security/data-security',
-        'android/security/exported-components',
-        'android/security/checklist',
-        'android/notifications',
-      ],
-    },
-  ],
+type SidebarModule = {
+  id: string;
+  sidebar: SidebarsConfig[string];
 };
+
+const sidebarFilePattern = /^\d+-.*\.ts$/;
+const sidebarsDir = path.join(__dirname, 'sidebars');
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null;
+}
+
+function getSidebarModule(filePath: string): SidebarModule {
+  const loadedModule: unknown = require(filePath);
+  const candidate =
+    isRecord(loadedModule) && 'default' in loadedModule ? loadedModule.default : loadedModule;
+
+  if (!isRecord(candidate) || typeof candidate.id !== 'string' || !('sidebar' in candidate)) {
+    throw new Error(
+      `Invalid sidebar module "${filePath}". Expected default export { id: string, sidebar: SidebarConfig }.`,
+    );
+  }
+
+  return {
+    id: candidate.id,
+    sidebar: candidate.sidebar as SidebarsConfig[string],
+  };
+}
+
+const sidebars = fs
+  .readdirSync(sidebarsDir)
+  .filter((fileName) => sidebarFilePattern.test(fileName))
+  .sort((left, right) => left.localeCompare(right))
+  .reduce<SidebarsConfig>((config, fileName) => {
+    const modulePath = path.join(sidebarsDir, fileName);
+    const sidebarModule = getSidebarModule(modulePath);
+
+    return {
+      ...config,
+      [sidebarModule.id]: sidebarModule.sidebar,
+    };
+  }, {});
 
 export default sidebars;

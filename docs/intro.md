@@ -5,16 +5,17 @@ description: 全栈学习文档站的入口和章节安排。
 
 # 学习路线
 
-这个文档站按教程专题组织内容，目标是逐步做成类似菜鸟教程的全栈学习文档站。当前第一版先放入 `Java`、`Kotlin` 和 `Android` 三个一级专题，后续再继续扩展前端、后端、数据库和工具链内容。
+这个文档站按教程专题组织内容，目标是逐步做成类似菜鸟教程的全栈学习文档站。当前先放入 `Java`、`Kotlin`、`Android`、`Compose` 和 `Flutter` 五个一级专题，后续再继续扩展前端、后端、数据库和工具链内容。
 
 ## 推荐顺序
 
-1. 完成开发环境搭建，确认 Android Studio、SDK、模拟器和 Gradle 都能正常工作。
+1. 完成开发环境搭建，确认 Android Studio、SDK、模拟器、Gradle 和 Flutter SDK 都能正常工作。
 2. 进入 Java 专题，学习变量、方法、类、对象和面向对象。
 3. 进入 Kotlin 专题，学习函数、集合、数据类和空安全。
 4. 进入 Android 专题，理解工程结构、应用组件、Activity、资源、Manifest 和生命周期。
-5. 学习 Compose、应用架构、数据存储、网络访问、权限、后台任务和通知。
-6. 用测试、调试、性能与发布检查，把知识整理成可运行项目。
+5. 进入 Compose 专题，学习声明式 UI、状态、导航、布局、主题、列表和动画。
+6. 进入 Flutter 专题，学习 Dart、Widget、布局、状态、路由、网络、本地存储、测试和发布。
+7. 用测试、调试、性能与发布检查，把知识整理成可运行项目。
 
 ## 学习方式
 
@@ -25,4 +26,4 @@ description: 全栈学习文档站的入口和章节安排。
 
 ## 下一步
 
-从 [Java 基础](./java/basics.md)、[Kotlin 基础](./kotlin/basics.md) 或 [Android 专题导读](./android/overview.md) 开始都可以。想先补语言就进入 Java 或 Kotlin 专题；想系统学习应用开发就进入 Android 专题。
+从 [Java 基础](./java/basics.md)、[Kotlin 基础](./kotlin/basics.md)、[Android 专题导读](./android/overview.md)、[Compose 入门](./compose/getting-started.md) 或 [Flutter 专题导读](./flutter/overview.md) 开始都可以。想先补语言就进入 Java 或 Kotlin 专题；想系统学习 Android 应用开发就进入 Android 和 Compose；想做跨平台应用就进入 Flutter。

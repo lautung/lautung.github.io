@@ -70,6 +70,18 @@ const config: Config = {
           position: 'left',
           label: 'Android',
         },
+        {
+          type: 'docSidebar',
+          sidebarId: 'composeSidebar',
+          position: 'left',
+          label: 'Compose',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'flutterSidebar',
+          position: 'left',
+          label: 'Flutter',
+        },
       ],
     },
     footer: {
@@ -132,11 +144,41 @@ const config: Config = {
           ],
         },
         {
+          title: 'Compose',
+          items: [
+            {
+              label: 'Compose 入门',
+              to: '/docs/compose/getting-started',
+            },
+            {
+              label: 'Compose 状态',
+              to: '/docs/compose/state',
+            },
+          ],
+        },
+        {
+          title: 'Flutter',
+          items: [
+            {
+              label: 'Flutter 导读',
+              to: '/docs/flutter/overview',
+            },
+            {
+              label: '环境搭建',
+              to: '/docs/flutter/setup',
+            },
+          ],
+        },
+        {
           title: '参考资源',
           items: [
             {
               label: 'Android Developers',
               href: 'https://developer.android.com/',
+            },
+            {
+              label: 'Flutter Docs',
+              href: 'https://docs.flutter.dev/',
             },
           ],
         },
