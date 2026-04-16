@@ -49,7 +49,7 @@ pnpm build
 - Java 专题：`docs/java/basics.md`、`docs/java/oop.md`
 - Kotlin 专题：`docs/kotlin/basics.md`、`docs/kotlin/null-safety.md`
 - Compose 专题：`docs/compose/getting-started.md`、`docs/compose/state.md`、`docs/compose/navigation.md`
-- Flutter 专题：`docs/flutter/overview.md`、`docs/flutter/getting-started/setup.md`、`docs/flutter/getting-started/fvm.md`、`docs/flutter/state/provider.md`、`docs/flutter/data/hive.md`
+- Flutter 专题：`docs/flutter/overview.md`、`docs/flutter/getting-started/setup.md`、`docs/flutter/getting-started/fvm.md`、`docs/flutter/state/provider.md`、`docs/flutter/state/bloc.md`、`docs/flutter/getx/overview.md`、`docs/flutter/app/go-router.md`、`docs/flutter/data/hive.md`、`docs/flutter/performance/overview.md`
 - Android 专题：
   - 基础篇：`docs/android/overview.md`、`docs/environment/setup.md`、`docs/android/fundamentals.md`、`docs/android/project-structure.md`
   - 高级 UI：`docs/android/advanced-ui/overview.md`

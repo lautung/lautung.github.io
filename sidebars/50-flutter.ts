@@ -28,13 +28,30 @@ const sidebar = [
       'flutter/state/state',
       'flutter/state/provider',
       'flutter/state/riverpod',
+      'flutter/state/bloc',
+      'flutter/state/mobx',
+      'flutter/state/redux',
+    ],
+  },
+  {
+    type: 'category',
+    label: 'GetX 专题',
+    collapsed: false,
+    items: [
+      'flutter/getx/overview',
+      'flutter/getx/state',
+      'flutter/getx/routing',
+      'flutter/getx/dependency',
     ],
   },
   {
     type: 'category',
     label: '应用能力',
     collapsed: false,
-    items: ['flutter/app/navigation'],
+    items: [
+      'flutter/app/navigation',
+      'flutter/app/go-router',
+    ],
   },
   {
     type: 'category',
@@ -44,6 +61,18 @@ const sidebar = [
       'flutter/data/networking',
       'flutter/data/storage',
       'flutter/data/hive',
+    ],
+  },
+  {
+    type: 'category',
+    label: '性能优化',
+    collapsed: false,
+    items: [
+      'flutter/performance/overview',
+      'flutter/performance/profiling',
+      'flutter/performance/rendering',
+      'flutter/performance/lists-images',
+      'flutter/performance/startup-memory',
     ],
   },
   {

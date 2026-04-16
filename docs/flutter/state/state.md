@@ -46,8 +46,19 @@ class _CounterPageState extends State<CounterPage> {
 ## 何时升级方案
 
 - 页面内部临时状态：优先使用 `setState`。
-- 多个页面共享状态：再考虑 `InheritedWidget`、[Provider](./provider.md)、[Riverpod](./riverpod.md) 等方案。
+- 多个页面共享状态：再考虑 `InheritedWidget`、[Provider](./provider.md)、[Riverpod](./riverpod.md)、[Bloc](./bloc.md)、[GetX](../getx/overview.md) 等方案。
 - 异步数据状态：至少要同时处理 loading、data 和 error。
+
+## 常见方案对比
+
+| 方案 | 适合场景 |
+| --- | --- |
+| [Provider](./provider.md) | 入门共享状态，理解 `ChangeNotifier` 和 `BuildContext` 读取方式。 |
+| [Riverpod](./riverpod.md) | 更强的 provider 模型、异步状态、测试和依赖覆盖。 |
+| [Bloc](./bloc.md) | 明确事件/状态流、团队协作和复杂业务流程。 |
+| [GetX](../getx/overview.md) | 想同时使用状态、路由和依赖注入的一体化方案。 |
+| [MobX](./mobx.md) | 响应式 observable、computed 和 action 模型。 |
+| [Redux](./redux.md) | 单一全局状态树、纯 reducer 和强约束数据流。 |
 
 ## 学习建议
 
@@ -57,4 +68,4 @@ class _CounterPageState extends State<CounterPage> {
 
 ## 下一步
 
-当状态需要被多个页面或组件读取时，可以继续学习 [Provider 状态管理](./provider.md)；如果希望状态逻辑更容易测试、复用和处理异步数据，再学习 [Riverpod 状态管理](./riverpod.md)。
+当状态需要被多个页面或组件读取时，可以继续学习 [Provider 状态管理](./provider.md)；如果希望状态逻辑更容易测试、复用和处理异步数据，再学习 [Riverpod 状态管理](./riverpod.md)。中大型项目可以继续比较 [Bloc 状态管理](./bloc.md)、[GetX 专题](../getx/overview.md)、[MobX 状态管理](./mobx.md) 和 [Redux 状态管理](./redux.md)。
