@@ -165,7 +165,7 @@ const config: Config = {
             },
             {
               label: '环境搭建',
-              to: '/docs/flutter/setup',
+              to: '/docs/flutter/getting-started/setup',
             },
           ],
         },
